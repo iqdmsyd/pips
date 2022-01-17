@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Carousel from '../components/Carousel'
 import Layout from '../components/Layout'
-import NewsItem from '../components/NewsItem' 
+import NewsItem from '../components/NewsItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faDownload, faFilePdf, faLink, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { graphql } from 'gatsby'
@@ -27,29 +27,29 @@ export default function Home({ data }) {
   ]
 
   const { recentNews } = data;
-  
+
   return (
     <Layout>
-      <Carousel slide={slide} setSlide={setSlide}/>
+      {/* <Carousel slide={slide} setSlide={setSlide}/> */}
       <div className='p-8 lg:p-16'>
         {/* Greetings */}
-        <section className='mb-8'>
-          <h1 className='mb-3 text-2xl font-semibold'>Greetings!</h1>
-          <p className='mb-3 text-sm text-justify'>
+        <section className='mb-8 space-y-3'>
+          <h1 className='font-medium text-2xl 2xl:text-3xl'>Greetings!</h1>
+          <p className=''>
             Social Science Education Study Program is one of the Study Programs within the Faculty of Social Science Education (FPIPS) of the Universitas Pendidikan Indonesia (UPI) which was established on June 24th, 2009 with the Decree of the Rector of UPI Number 4783/H40/PP/2009. This study program was established as an answer to the school needs for social science educators in junior high schools (SMP) and the equivalent.
           </p>
-          <p className='mb-3 text-sm text-justify'>
+          <p className=''>
             The current accreditation rating of Social Science Education is A (372) according to the Decree of National Accreditation Body for Higher Education (BAN PT) Number 128/SK/BAN-PT/Akred/S/II/2019 which is valid until 2024. The main study of Social Science Education is the study of social sciences (history, geography, economics, law, politics, and sociology-anthropology) which are thematically packaged and integrated (interdisciplinary, multidisciplinary and transdisciplinary) with social science education theory, social science education learning in theory and practice, and social studies education research. Supported by adequate human resources, the Social Science Education Study Program consistently provides quality education based on the Academic Qualification Standards and Competency of Educators and the Indonesian National Qualifications Framework (KKNI).
           </p>
-          <p className='mb-3 text-sm text-justify'>
+          <p className=''>
             The profile of the first and foremost social science education graduate is as a social science educator, as a researcher on issues related to social studies learning and other social problems, and as a social worker (environmental activist and anti-corruption activist). Social Science Education has partnered with the Association of Indonesian Social Science Study Programs (APRIPSI), Social Science Teacher Conference, schools and higher education institutions, government and private institutions, both national and international.
           </p>
         </section>
-        
+
         {/* Recent News */}
-        <section className='mb-8'>
-          <h1 className='mb-3 text-2xl font-semibold'>Recent News</h1>
-          <div className='flex flex-col gap-4 md:basis-1/3 md:flex-row'>
+        <section className='mb-8 space-y-3'>
+          <h1 className='text-2xl font-medium 2xl:text-3xl'>Recent News</h1>
+          <div className='flex flex-col gap-6 md:basis-1/3 md:flex-row'>
             { recentNews.nodes.map( item => (
               <NewsItem key={item.id} item={item}/>
             )) }
@@ -62,11 +62,11 @@ export default function Home({ data }) {
         </section> */}
 
         {/* Announcements & External Links */}
-        <section>        
+        <section>
           <div className='flex flex-col gap-4 md:basis-1/3 md:flex-row'>
             <div className='w-full mb-4'>
-              <h1 className='mb-2 text-2xl font-semibold'><FontAwesomeIcon icon={faInfoCircle} size='sm' className='mr-1'/>Announcements</h1>
-              <ul className='text-sm'>
+              <h1 className='mb-2 text-2xl 2xl:text-3xl font-medium'><FontAwesomeIcon icon={faInfoCircle} size='sm' className='mr-1'/>Announcements</h1>
+              <ul className=''>
                 { links.map(({title, url}) => (
                   <li>
                     <a href={url} className='hover:underline'> <FontAwesomeIcon icon={faLink} className='mr-2' size='sm'/>{title}</a>
@@ -75,8 +75,8 @@ export default function Home({ data }) {
               </ul>
             </div>
             <div className='w-full mb-4'>
-              <h1 className='mb-2 text-2xl font-semibold'><FontAwesomeIcon icon={faDownload} size='sm' className='mr-1'/>Downloads</h1>
-              <ul className='text-sm'>
+              <h1 className='mb-2 text-2xl 2xl:text-3xl font-medium'><FontAwesomeIcon icon={faDownload} size='sm' className='mr-1'/>Downloads</h1>
+              <ul className=''>
                 { links.map(({title, url}) => (
                   <li>
                     <a href={url} className='hover:underline'> <FontAwesomeIcon icon={faFilePdf} className='mr-2' size='sm'/>{title}</a>
@@ -85,8 +85,8 @@ export default function Home({ data }) {
               </ul>
             </div>
             <div className='w-full'>
-              <h1 className='mb-2 text-2xl font-semibold'><FontAwesomeIcon icon={faLink} size='sm' className='mr-1'/>Links</h1>
-              <ul className='text-sm'>
+              <h1 className='mb-2 text-2xl 2xl:text-3xl font-medium'><FontAwesomeIcon icon={faLink} size='sm' className='mr-1'/>Links</h1>
+              <ul className=''>
                 { links.map(({title, url}) => (
                   <li>
                     <a href={url} className='hover:underline'> <FontAwesomeIcon icon={faExternalLinkAlt} className='mr-2' size='sm'/>{title}</a>

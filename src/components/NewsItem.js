@@ -24,12 +24,12 @@ export default function NewsItem({ item }) {
   return (
     <div>
       <img src='/panigale-v4r.jpg' alt='' className='w-full'/>
-      <h3 className='mb-1 text-sm font-semibold hover:underline'><a href={'/news/' + slug}>{ title }</a></h3>
-      <h5 className='flex items-center mb-2 text-xs text-gray-500'>
+      <h2 className='font-semibold hover:underline'><a href={'/news/' + slug}>{ title }</a></h2>
+      <span className='flex items-center text-sm text-gray-500 mb-2'>
         <FontAwesomeIcon icon={faCalendarAlt} size='xs' className='mr-1'/>{ getDate(date) }
         <FontAwesomeIcon icon={faClock} size='xs' className='ml-2 mr-1'/>{ time }
-      </h5>
-      <a href={'/news/' + slug} className='text-sm text-gray-500 hover:underline'>
+      </span>
+      <a href={'/news/' + slug} className='text-gray-500 hover:underline'>
         <p dangerouslySetInnerHTML={{ __html: makePreview(content) }}/>
       </a>
     </div>
