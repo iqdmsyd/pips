@@ -23,6 +23,7 @@
     "date-fns": "^2.27.0",
     "gatsby": "^4.3.0",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
+    "gatsby-plugin-intl": "^0.3.3",
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-transformer-remark": "^5.4.0",
     "graphql-tag": "^2.12.6",
