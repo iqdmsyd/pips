@@ -1,0 +1,36 @@
+{
+  "title": "Website Resmi Pendidikan Ilmu Pengetahuan Sosial",
+  "home": {
+    "greetings": "Salam Hangat",
+    "recentNews": "Berita Terbaru",
+    "announcements": "Pengumuman",
+    "downloads": "Unduh",
+    "links": "Tautan"
+  },
+  "profile": {
+    "greetings": "Sambutan Ketua Program Studi Pendidikan Ilmu Pengetahuan Sosial",
+    "history": "Sejarah",
+    "visionAndMission": "Visi & Misi",
+    "accreditation": "Akreditasi",
+    "organization": "Struktur Organisasi"
+  },
+  "academic": {
+    "curriculum": "Kurikulum",
+    "calendar": "Kalender Akademik"
+  },
+  "admission": {
+    "scholarshipLocal": "Beasiswa Mahasiswa Indonesia",
+    "scholarshipInter": "Beasiswa Mahasiswa Internasional"
+  },
+  "research": {
+    "communityService": "Pengabdian Kepada Masyarakat",
+    "journal": "Jurnal"
+  },
+  "affairs": {
+    "studentAchievment": "Penghargaan Mahasiswa",
+    "studentMobility": "Mobilitas Mahasiswa",
+    "studentAssociation": "Himpunan Mahasiswa",
+    "studentActivity": "Aktivitas Mahasiswa",
+    "alumni": "Alumni"
+  }
+}
