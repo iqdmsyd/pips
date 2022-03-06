@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className='px-6 py-2 text-xs text-white bg-green-600 lg:px-16'>
+      <div className='px-6 py-2 text-xs text-white bg-amber-500 lg:px-16'>
         <p>Copyright @2021.</p>
       </div>
     </footer>

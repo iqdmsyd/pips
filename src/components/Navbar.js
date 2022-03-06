@@ -4,49 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faSearch, faChevronDown, faBars } from '@fortawesome/free-solid-svg-icons'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Flags from 'country-flag-icons/react/3x2'
+import { useIntl, changeLocale } from 'gatsby-plugin-intl'
+import pages from '../texts/navs.json'
 
 export default function Navbar() {
-  const pages = [
-    { title: 'Home', url: '/' },
-    { title: 'Profile', url:'/profile', subs: [
-      { title: 'History', url: '/profile#history' },
-      { title: 'Vision & Mission', url: '/profile#vision-and-mission' },
-      { title: 'Accreditation', url: '/profile#accreditation' },
-      { title: 'Organization', url: '/profile#organization' },
-    ] },
-    { title: 'Academic', url:'/academic', subs: [
-      { title: 'Curriculum', url: '/academic#curriculum' },
-      { title: 'Academic Calendar', url: '/academic#calendar' },
-      { title: 'Human Resource', url: '/academic#human-resource' },
-    ] },
-    { title: 'Affairs', url: '/affairs', subs: [
-      { title: 'Scholarship', url: '/affairs#scholarship' },
-      { title: 'Achievment', url: '/affairs#achievment' },
-      { title: 'Student Exchange', url: '/affairs#student-exchange' },
-      { title: 'Alumni', url: '/affairs#alumni' },
-    ] },
-    { title: 'Research', url: '/research', subs: [
-      { title: 'Expertise Group', url: '/reserach#expertise-group' },
-      { title: 'Community Service', url: '/reserach#community-service' },
-      { title: 'Journal', url: '/reserach#journal' },
-    ] },
-    { title: 'Facilities', url: '/facilities', subs: [
-      { title: 'University', url: '/facilities#university' },
-      { title: 'Faculty', url: '/facilities#faculty' },
-      { title: 'Program Study', url: '/facilities#program-study' },
-    ] },
-    { title: 'Albums', url: '/albums', subs: [
-      { title: 'Photo Gallery', url: '/albums#photo' },
-      { title: 'Video Gallery', url: '/albums#video' },
-    ] },
-  ];
-
+  const intl = useIntl();
+  const switchLang = intl.locale === 'id' ? 'en' : 'id';
   const [ isOpen, setIsOpen ] = useState(false);
 
   return (
     <>
     {/* top bar */}
-      <div className='flex items-center px-8 py-3 text-xs bg-gray-100 lg:px-12'>
+      <div className='flex items-center px-8 py-3 text-xs bg-amber-200 lg:px-12'>
         <ul className='flex flex-auto space-x-4'>
           <li>
             <FontAwesomeIcon icon={faPhone}/> 087700554238
@@ -57,13 +26,13 @@ export default function Navbar() {
         </ul>
         <div className='flex space-x-2'>
           <a href='https://youtube.com/channel/UCG2B0xFztDOPujd50ns7lRg'><FontAwesomeIcon icon={faYoutube}/></a>
-          <button className='flex'>
-            <Flags.US className='w-3.5 mr-1'/>
-            English
+          <button onClick={() => changeLocale(switchLang)} className='flex'>
+            { intl.locale === 'id' ? <Flags.US className='w-3.5 mr-1'/> : <Flags.ID className='w-3.5 mr-1'/> }
+            { intl.locale === 'id' ? 'EN' : 'ID' }
           </button>
         </div>
       </div>
-      
+
       {/* identity */}
       <div className='flex flex-wrap items-center justify-center p-4 space-y-2 bg-white lg:px-12 md:px-8 md:flex-nowrap md:justify-between'>
         <div className='flex space-x-4'>
@@ -87,12 +56,12 @@ export default function Navbar() {
       {/* navigation */}
       <nav>
         <ul className='justify-center hidden space-x-2 bg-white md:flex'>
-        { pages.map(({title, url, subs}, idx) => (
+        { pages[intl.locale].map(({title, url, subs}, idx) => (
           <li key={idx} className='relative group'>
             <Link to={url} className='flex items-center p-4 text-sm lg:text-base hover:bg-white group-hover:bg-gray-200'>
               {title}
               { subs && <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-xs'/> }
-            </Link>         
+            </Link>
             {subs && (
               <div className='absolute z-50 hidden bg-white shadow min-w-max top-13 lg:top-14 group-hover:flex group-hover:flex-col hover:flex hover:flex-col'>
                 {subs.map(({title, url}, idx) => (
@@ -116,7 +85,7 @@ export default function Navbar() {
             </div>
           </div>
           <ul className={isOpen ? 'block' : 'hidden'}>
-          { pages.map(({title, url, subs}, idx) => (
+          { pages[intl.locale].map(({title, url, subs}, idx) => (
             <li key={idx}>
               <Link to={url} className='block py-2 mx-4 transition-all ease-in-out rounded hover:px-4 hover:bg-gray-200'>
                 {title}

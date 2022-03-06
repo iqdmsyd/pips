@@ -7,7 +7,6 @@ export default function NewsItem({ item }) {
   let { title, slug, date, time } = item.frontmatter;
   let { html: content } = item;
 
-  console.log(item.frontmatter);
 
   function makePreview(ctn) {
     return ctn.substring(0, 250) + '...'
@@ -24,8 +23,8 @@ export default function NewsItem({ item }) {
   return (
     <div>
       <img src='/panigale-v4r.jpg' alt='' className='w-full'/>
-      <h2 className='font-semibold hover:underline'><a href={'/news/' + slug}>{ title }</a></h2>
-      <span className='flex items-center text-sm text-gray-500 mb-2'>
+      <h3 className='hover:underline'><a href={'/news/' + slug}>{ title }</a></h3>
+      <span className='flex items-center mb-2 text-sm text-gray-500'>
         <FontAwesomeIcon icon={faCalendarAlt} size='xs' className='mr-1'/>{ getDate(date) }
         <FontAwesomeIcon icon={faClock} size='xs' className='ml-2 mr-1'/>{ time }
       </span>
