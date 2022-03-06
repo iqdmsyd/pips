@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
+/*
  * Purpose:
  * Assign height: "100%" to
- * html, body, #___gatsby &  
+ * html, body, #___gatsby &
  * div with role="group"
 */
 
@@ -29,6 +29,55 @@ body {
   @apply list-decimal list-outside ml-3
 }
 
+#student-mobility li {
+  @apply list-decimal list-outside ml-3
+}
+
+#student-activity li {
+  @apply list-decimal list-outside ml-3
+}
+
 #vision-and-mission h3 {
   @apply text-lg
+}
+
+.md-text {
+  @apply first:-mt-4 last:-mb-2
+}
+
+.md-text h1 {
+  @apply text-2xl xl:text-3xl font-medium mt-4
+}
+
+.md-text h2 {
+  @apply text-lg xl:text-xl font-semibold mt-3
+}
+
+.md-text p {
+  @apply mb-3
+}
+
+.md-text a {
+  @apply underline hover:text-blue-500
+}
+
+.swiper-button-next {
+  color: rgb(204, 204, 21) !important;
+}
+
+.swiper-button-prev {
+  color: rgb(204, 204, 21) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgb(204, 204, 21) !important;
+}
+
+details .nav-summary::marker {
+  display: none;
+  content: "";
+}
+
+details[open] .nav-summary-chevron {
+  transform: rotate(180deg);
 }

@@ -1,0 +1,33 @@
+{ "en": [
+    { "title": "Universitas Pendidikan Indonesia", "url": "http://www.upi.edu" },
+    { "title": "E-Journal", "url": "https://ejournal.upi.edu" },
+    { "title": "Campus Library", "url": "http://perpustakaan.upi.edu" },
+    { "title": "Campus Repository", "url": "http://repository.upi.edu" },
+    { "title": "Campus Digital Library", "url": "http://digilib.upi.edu" },
+    { "title": "Student Admission", "url": "http://pmb.upi.edu" },
+    { "title": "SPOT", "url": "http://spot.upi.edu" },
+    { "title": "SPADA", "url": "http://spada.upi.edu" },
+    { "title": "SINO", "url": "http://sino2.upi.edu/nilai" },
+    { "title": "MRS", "url": "http://mrs.upi.edu" },
+    { "title": "SINNDO", "url": "https://siak.upi.edu/sinndo" },
+    { "title": "Student Admission Evaluation", "url": "http://evaluasi-pbm.upi.edu" },
+    { "title": "Syllabus", "url": "http://silabus.upi.edu" },
+    { "title": "File Directories", "url": "http://file.upi.edu" }
+  ],
+  "id": [
+    { "title": "Universitas Pendidikan Indonesia", "url": "http://www.upi.edu" },
+    { "title": "E-Journal", "url": "https://ejournal.upi.edu" },
+    { "title": "Campus Library", "url": "http://perpustakaan.upi.edu" },
+    { "title": "Campus Repository", "url": "http://repository.upi.edu" },
+    { "title": "Campus Digital Library", "url": "http://digilib.upi.edu" },
+    { "title": "Student Admission", "url": "http://pmb.upi.edu" },
+    { "title": "SPOT", "url": "http://spot.upi.edu" },
+    { "title": "SPADA", "url": "http://spada.upi.edu" },
+    { "title": "SINO", "url": "http://sino2.upi.edu/nilai" },
+    { "title": "MRS", "url": "http://mrs.upi.edu" },
+    { "title": "SINNDO", "url": "https://siak.upi.edu/sinndo" },
+    { "title": "Student Admission Evaluation", "url": "http://evaluasi-pbm.upi.edu" },
+    { "title": "Syllabus", "url": "http://silabus.upi.edu" },
+    { "title": "File Directories", "url": "http://file.upi.edu" }
+  ]
+}

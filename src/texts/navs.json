@@ -1,0 +1,86 @@
+{
+  "en": [
+    { "title": "Profile", "url":"/profile", "subs": [
+      { "title": "History", "url": "/profile/history" },
+      { "title": "Vision & Mission", "url": "/profile/vision-and-mission" },
+      { "title": "Accreditation", "url": "/profile/accreditation" },
+      { "title": "Organization", "url": "/profile/organization" }
+    ] },
+    { "title": "Academic", "url":"#", "subs": [
+      { "title": "Curriculum", "url": "/academic/curriculum" },
+      { "title": "Academic Calendar", "url": "/academic/calendar" },
+      { "title": "Human Resource", "url": "/academic/human-resource" }
+    ] },
+    { "title": "Affairs", "url": "#", "subs": [
+      { "title": "Students", "subs": [
+        { "title": "Achievment", "url": "/affrairs/student-achievment" },
+        { "title": "Student Mobility", "url": "/affairs/student-mobility" },
+        { "title": "Student Association", "url": "/affairs/student-association" },
+        { "title": "Student Activity", "url": "/affairs/student-activity" }
+      ] },
+      { "title": "Alumni", "url": "/affairs/alumni" }
+    ] },
+    { "title": "Research", "url": "#", "subs": [
+      { "title": "Books Collection", "url": "/research/books-collection" },
+      { "title": "Community Service", "url": "/research/community-service" },
+      { "title": "Journal", "url": "/research/journal" }
+    ] },
+    { "title": "Admission", "url": "#", "subs": [
+      { "title": "Indonesian Students", "subs": [
+        { "title": "Registration", "url": "https://pmb.upi.edu/", "blank": true },
+        { "title": "Scholarship", "url": "/admission/scholarship-local" }
+      ] },
+      { "title": "International Students", "subs": [
+        { "title": "Registration", "url": "http://dia.upi.edu/international-students/admission/", "blank": true },
+        { "title": "Scholarship", "url": "/admission/scholarship-inter" }
+      ] }
+    ] },
+    { "title": "Facilities", "url": "#", "subs": [
+      { "title": "University", "url": "#" },
+      { "title": "Faculty", "url": "#" },
+      { "title": "Program Study", "url": "#" }
+    ] }
+  ],
+  "id": [
+    { "title": "Profil", "url":"/profile", "subs": [
+      { "title": "Sejarah", "url": "/profile/history" },
+      { "title": "Visi & Misi", "url": "/profile/vision-and-mission" },
+      { "title": "Akreditasi", "url": "/profile/accreditation" },
+      { "title": "Organisasi", "url": "/profile/organization" }
+    ] },
+    { "title": "Akademik", "url":"#", "subs": [
+      { "title": "Kurikulum", "url": "/academic/curriculum" },
+      { "title": "Kalender Akademik", "url": "/academic/calendar" },
+      { "title": "Sumber Daya Manusia", "url": "/academic/human-resource" }
+    ] },
+    { "title": "Kemahasiswaan", "url": "#", "subs": [
+      { "title": "Mahasiswa", "url": "#", "subs": [
+        { "title": "Pencapaian Mahasiswa", "url": "/affrairs/student-achievment" },
+        { "title": "Mobilitas Mahasiswa", "url": "/affairs/student-mobility" },
+        { "title": "Himpunan Mahasiswa", "url": "/affairs/student-association" },
+        { "title": "Kegiatan Mahasiswa", "url": "/affairs/student-activity" }
+      ] },
+      { "title": "Alumni", "url": "/affairs/alumni" }
+    ] },
+    { "title": "Penelitian", "url": "#", "subs": [
+      { "title": "Koleksi Buku", "url": "/research/books-collection" },
+      { "title": "Pengabdian Kepada Masyarakat", "url": "/research/community-service" },
+      { "title": "Jurnal", "url": "/research/journal" }
+    ] },
+    { "title": "Penerimaan", "url": "#", "subs": [
+      { "title": "Mahasiswa Indonesia", "subs": [
+        { "title": "Pendaftaran", "url": "https://pmb.upi.edu/", "blank": true },
+        { "title": "Beasiswa", "url": "/admission/scholarship-local" }
+      ] },
+      { "title": "Mahasiswa Internasional", "subs": [
+        { "title": "Pendaftaran", "url": "http://dia.upi.edu/international-students/admission/", "blank": true },
+        { "title": "Beasiswa", "url": "/admission/scholarship-inter" }
+      ] }
+    ] },
+    { "title": "Fasilitas", "url": "#", "subs": [
+      { "title": "Univesitas", "url": "#" },
+      { "title": "Fakultas", "url": "#" },
+      { "title": "Program Studi", "url": "#" }
+    ] }
+  ]
+}

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: Judul Berita Kelima Adalah Sebagai Berikut
 slug: judul-berita-kelima-adalah-sebagai-berikut
 date: 2021-12-21
