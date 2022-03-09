@@ -3,31 +3,40 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-require("dotenv").config({
-  path: `.env`,
-});
-
-const strapiConfig = {
-  apiURL: process.env.STRAPI_API_URL,
-  accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: [
-    {
-      singularName: 'article',
-      queryParams: {
-        // Populate all the fields
-        populate: '*',
-      },
-    },
-  ],
-  singleTypes: [],
-};
-
 module.exports = {
   /* Your site config here */
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-fontawesome-css',
-    'gatsby-transformer-remark',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+        {
+          resolve: "gatsby-remark-external-links",
+          options: {
+            target: "_blank",
+            rel: "noopener noreferrer"
+          }
+        }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`id`, `en`],
+        // language file path
+        defaultLanguage: `id`,
+        // option to redirect to `/ko` when connecting `/`
+        redirect: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -84,37 +93,6 @@ module.exports = {
         path: `${__dirname}/src/texts/affairs`,
       },
     },
-    {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        // language JSON resource path
-        path: `${__dirname}/src/intl`,
-        // supported language
-        languages: [`id`, `en`],
-        // language file path
-        defaultLanguage: `id`,
-        // option to redirect to `/ko` when connecting `/`
-        redirect: true,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-        {
-          resolve: "gatsby-remark-external-links",
-          options: {
-            target: "_blank",
-            rel: "noopener noreferrer"
-          }
-        }
-        ]
-      }
-    },
-    {
-      resolve: 'gatsby-source-strapi',
-      options: strapiConfig
-    }
   ],
   siteMetadata: {
     title: 'Pendidikan Ilmu Pengetahuan Sosial',

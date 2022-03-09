@@ -41,36 +41,32 @@ body {
   @apply text-lg
 }
 
-.md-text {
-  @apply first:-mt-4 last:-mb-2
+.markdown h1 {
+  @apply text-2xl xl:text-3xl font-bold mb-4
 }
 
-.md-text h1 {
-  @apply text-2xl xl:text-3xl font-medium mt-4
+.markdown h2 {
+  @apply text-lg xl:text-xl font-semibold mb-3
 }
 
-.md-text h2 {
-  @apply text-lg xl:text-xl font-semibold mt-3
-}
-
-.md-text p {
+.markdown p {
   @apply mb-3
 }
 
-.md-text a {
+.markdown a {
   @apply underline hover:text-blue-500
 }
 
 .swiper-button-next {
-  color: rgb(204, 204, 21) !important;
+  color: rgb(245, 245, 245) !important;
 }
 
 .swiper-button-prev {
-  color: rgb(204, 204, 21) !important;
+  color: rgb(245, 245, 245) !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: rgb(204, 204, 21) !important;
+  background: rgb(245, 245, 245) !important;
 }
 
 details .nav-summary::marker {

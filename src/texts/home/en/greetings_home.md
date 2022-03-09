@@ -2,7 +2,7 @@
 lang: en
 ---
 
-# Greetings!
+# About Us
 
 Social Science Education Study Program is one of the Study Programs within the Faculty of Social Science Education (FPIPS) of the Universitas Pendidikan Indonesia (UPI) which was established on June 24th, 2009 with the Decree of the Rector of UPI Number 4783/H40/PP/2009. This study program was established as an answer to the school needs for social science educators in junior high schools (SMP) and the equivalent.
 

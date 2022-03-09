@@ -1,6 +1,7 @@
 import React from 'react'
 import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -12,15 +13,20 @@ export default function Carousel () {
       slidesPerView={1}
       pagination={{ clickable: true }}
       loop
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      className='mt-2 md:mt-4'
     >
       <SwiperSlide>
-        <img src='/carousel.jpeg' alt='' className='w-full'/>
+        <StaticImage src='../../static/carousel.jpeg' className='w-full' alt='...' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/carousel.jpeg' alt='' className='w-full'/>
+        <StaticImage src='../../static/carousel.jpeg' className='w-full' alt='...' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/carousel.jpeg' alt='' className='w-full'/>
+        <StaticImage src='../../static/carousel.jpeg' className='w-full' alt='...' />
       </SwiperSlide>
     </Swiper>
   )

@@ -12,7 +12,7 @@
       { "title": "Human Resource", "url": "/academic/human-resource" }
     ] },
     { "title": "Affairs", "url": "#", "subs": [
-      { "title": "Students", "subs": [
+      { "title": "Students", "url": "#", "subs": [
         { "title": "Achievment", "url": "/affrairs/student-achievment" },
         { "title": "Student Mobility", "url": "/affairs/student-mobility" },
         { "title": "Student Association", "url": "/affairs/student-association" },
@@ -26,11 +26,11 @@
       { "title": "Journal", "url": "/research/journal" }
     ] },
     { "title": "Admission", "url": "#", "subs": [
-      { "title": "Indonesian Students", "subs": [
+      { "title": "Indonesian Students", "url": "#", "subs": [
         { "title": "Registration", "url": "https://pmb.upi.edu/", "blank": true },
         { "title": "Scholarship", "url": "/admission/scholarship-local" }
       ] },
-      { "title": "International Students", "subs": [
+      { "title": "International Students", "url": "#", "subs": [
         { "title": "Registration", "url": "http://dia.upi.edu/international-students/admission/", "blank": true },
         { "title": "Scholarship", "url": "/admission/scholarship-inter" }
       ] }
@@ -68,11 +68,11 @@
       { "title": "Jurnal", "url": "/research/journal" }
     ] },
     { "title": "Penerimaan", "url": "#", "subs": [
-      { "title": "Mahasiswa Indonesia", "subs": [
+      { "title": "Mahasiswa Indonesia", "url": "#", "subs": [
         { "title": "Pendaftaran", "url": "https://pmb.upi.edu/", "blank": true },
         { "title": "Beasiswa", "url": "/admission/scholarship-local" }
       ] },
-      { "title": "Mahasiswa Internasional", "subs": [
+      { "title": "Mahasiswa Internasional", "url": "#", "subs": [
         { "title": "Pendaftaran", "url": "http://dia.upi.edu/international-students/admission/", "blank": true },
         { "title": "Beasiswa", "url": "/admission/scholarship-inter" }
       ] }

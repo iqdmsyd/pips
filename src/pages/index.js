@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Carousel from '../components/Carousel'
 import Layout from '../components/Layout'
 import NewsItem from '../components/NewsItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faDownload, faFilePdf, faLink, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { graphql } from 'gatsby'
-import { Link, useIntl, FormattedMessage } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl'
 import links from '../texts/home/links.json';
 
 export default function Home({ data }) {
@@ -18,13 +18,13 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Carousel/>
-      <div className='p-8 lg:p-16'>
+      <div className='p-8 lg:p-10'>
         {/* Greetings */}
-        <section className='mb-8 md-text' dangerouslySetInnerHTML={{ __html: greetings.html }} />
+        <section className='mb-8 markdown text-justify transition-all' dangerouslySetInnerHTML={{ __html: greetings.html }} />
 
         {/* Recent News */}
         <section className='mb-8'>
-          <h1 className='mb-2 text-2xl font-medium 2xl:text-3xl'>{ intl.formatMessage({ id: "home.recentNews" }) }</h1>
+          <h1 className='mb-4 text-2xl font-bold 2xl:text-3xl'>{ intl.formatMessage({ id: "home.recentNews" }) }</h1>
           <div className='flex flex-col gap-6 md:basis-1/3 md:flex-row'>
             { recentNews.nodes.map( item => (
               <NewsItem key={item.id} item={item}/>
@@ -94,7 +94,7 @@ export const data = graphql`
           title
           time
           slug
-          date
+          date(formatString: "MMMM Do, YYYY")
         }
         html
         id
