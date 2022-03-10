@@ -19,52 +19,52 @@ export default function NeoNavbar() {
 
   const [ isNavOpen, setIsNavOpen ] = useState(false)
 
-  document.querySelectorAll('details').forEach((D,_,A) => {
-    D.ontoggle = _ => {
-      if (D.open) {
-        A.forEach(d => { if (d !== D) d.open = false })
-      }
-    }
-  })
+  // document.querySelectorAll('details').forEach((D,_,A) => {
+  //   D.ontoggle = _ => {
+  //     if (D.open) {
+  //       A.forEach(d => { if (d !== D) d.open = false })
+  //     }
+  //   }
+  // })
 
   return (
     <div className='sticky top-0 z-50'>
       {/* top nav */}
       <div className='bg-black'>
-        <div className='flex bg-black py-2 px-4 align-middle max-w-1200 mx-auto'>
-          <span className='hidden md:block mr-2'>
+        <div className='flex px-4 py-2 mx-auto align-middle bg-black max-w-1200'>
+          <span className='hidden mr-2 md:block'>
             <FontAwesomeIcon icon={faLanguage} className='text-white' size='lg'/>
           </span>
-          <button className='relative flex align-middle text-white text-xs md:text-sm px-2'  onClick={ () => setChangeLangOpen(c => !c) }>
+          <button className='relative flex px-2 text-xs text-white align-middle md:text-sm'  onClick={ () => setChangeLangOpen(c => !c) }>
             { (intl.locale).toUpperCase() }
             <span><FontAwesomeIcon icon={faChevronDown} className='ml-2 text-xs'/></span>
-            { changeLangOpen && <div className='absolute text-white bg-black z-50 left-0 top-full w-full pt-2'>
-              <button className='hover:bg-gray-500 py-1 block w-full' onClick={() => changeLang('en')}>EN</button>
-              <button className='hover:bg-gray-500 py-1 block w-full' onClick={() => changeLang('id')}>ID</button>
+            { changeLangOpen && <div className='absolute left-0 z-50 w-full pt-2 text-white bg-black top-full'>
+              <button className='block w-full py-1 hover:bg-gray-500' onClick={() => changeLang('en')}>EN</button>
+              <button className='block w-full py-1 hover:bg-gray-500' onClick={() => changeLang('id')}>ID</button>
             </div> }
           </button>
 
-          <ul className='ml-auto flex gap-4'>
+          <ul className='flex gap-4 ml-auto'>
             <li><FontAwesomeIcon icon={faInstagram} className='text-white'/></li>
             <li><FontAwesomeIcon icon={faYoutube} className='text-white'/></li>
             <li><FontAwesomeIcon icon={faPhone} className='text-white'/></li>
             <li><FontAwesomeIcon icon={faEnvelope} className='text-white'/></li>
-            <li><FontAwesomeIcon icon={faSearch} className='text-white ml-4'/></li>
+            <li><FontAwesomeIcon icon={faSearch} className='ml-4 text-white'/></li>
           </ul>
         </div>
       </div>
 
       {/* main navigation */}
-      <div className='bg-red-700 py-2 px-4'>
-        <div className='flex bg-red-700 max-w-1200 mx-auto align-middle'>
+      <div className='px-4 py-2 bg-red-700'>
+        <div className='flex mx-auto align-middle bg-red-700 max-w-1200'>
           <a href='/'>
             <img src='/logo_upi.png' className='h-10 lg:h-12' alt='logo pips'/>
           </a>
-          <nav className='ml-auto flex align-middle'>
+          <nav className='flex ml-auto align-middle'>
             <ul className='justify-center hidden space-x-2 bg-red-700 lg:flex'>
             { pages[intl.locale].map(({title, url, subs}, idx) => (
               <li key={idx} className='relative group'>
-                <Link to={url} className='flex items-center p-4 text-white text-xs lg:text-sm hover:bg-black group-hover:bg-black'>
+                <Link to={url} className='flex items-center p-4 text-xs text-white lg:text-sm hover:bg-black group-hover:bg-black'>
                   {title}
                   { subs && <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-xs'/> }
                 </Link>
@@ -78,8 +78,8 @@ export default function NeoNavbar() {
                               { subs.map(({ title, url, blank }, idx) => (
                                 <li key={idx}>
                                   { blank
-                                    ? <a href={url} rel="noreferrer" target="_blank" className='w-full block px-4 py-2 text-sm hover:bg-gray-300'>{title}</a>
-                                    : <Link to={url} className='w-full block px-4 py-2 text-sm hover:bg-gray-300'>{title}</Link>}
+                                    ? <a href={url} rel="noreferrer" target="_blank" className='block w-full px-4 py-2 text-sm hover:bg-gray-300'>{title}</a>
+                                    : <Link to={url} className='block w-full px-4 py-2 text-sm hover:bg-gray-300'>{title}</Link>}
                                 </li>
                               )) }
                             </ul>
@@ -100,20 +100,20 @@ export default function NeoNavbar() {
 
       {/* collapsible navigation */}
       { isNavOpen && (
-        <div className='py-4 px-4 absolute z-50 w-full bg-slate-100'>
+        <div className='absolute z-50 w-full px-4 py-4 bg-slate-100'>
           <nav>
             <ul className='space-y-2'>
               { pages[intl.locale].map(({title, url, subs}, idx) => (
-                <li key={idx} className='group w-full bg-slate-100 text-sm'>
+                <li key={idx} className='w-full text-sm group bg-slate-100'>
                   <details>
-                    <summary className='nav-summary bg-gray-300'>
+                    <summary className='bg-gray-300 nav-summary'>
                       <Link to={url} className='inline-block p-2 font-semibold'>
                         { title }
                       </Link>
                       { subs && <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-xs nav-summary-chevron'/> }
                     </summary>
                     { subs && (
-                      <ul className='w-full bg-slate-100 mt-1'>
+                      <ul className='w-full mt-1 bg-slate-100'>
                       { subs.map(({title, url, subs}, idx) => {
                         return subs
                           ? <React.Fragment key={idx}>
@@ -122,14 +122,14 @@ export default function NeoNavbar() {
                                 { subs.map(({ title, url, blank }, idx) => (
                                   <li key={idx}>
                                   { blank
-                                    ? <a href={url} rel="noreferrer" target="_blank" className='px-3 w-full block hover:text-red-500'>{title}</a>
-                                    : <Link key={idx} to={url} className='px-3 w-full block hover:text-red-500'>{title}</Link>
+                                    ? <a href={url} rel="noreferrer" target="_blank" className='block w-full px-3 hover:text-red-500'>{title}</a>
+                                    : <Link key={idx} to={url} className='block w-full px-3 hover:text-red-500'>{title}</Link>
                                   }
                                   </li>
                                 )) }
                               </ul>
                             </React.Fragment>
-                          : <li key={idx}><Link key={idx} to={url} className='block px-2 w-full hover:text-red-500'>{title}</Link></li>
+                          : <li key={idx}><Link key={idx} to={url} className='block w-full px-2 hover:text-red-500'>{title}</Link></li>
                       }) }
                       </ul>
                     ) }
