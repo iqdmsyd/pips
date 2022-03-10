@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from '../components/Carousel'
 import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import NewsItem from '../components/NewsItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faDownload, faFilePdf, faLink, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
@@ -9,18 +10,19 @@ import { useIntl } from 'gatsby-plugin-intl'
 import links from '../texts/home/links.json';
 
 export default function Home({ data }) {
+  let { aboutUs, recentNews } = data;
   const intl = useIntl();
-  let { greetings, recentNews } = data;
 
   // filter data
-  greetings = greetings.nodes.filter(grt => grt.frontmatter.lang === intl.locale)[0];
+  aboutUs = aboutUs.nodes.filter(grt => grt.frontmatter.lang === intl.locale)[0];
 
   return (
     <Layout>
+      <Seo title="Home" />
       <Carousel/>
       <div className='p-8 lg:p-10'>
         {/* Greetings */}
-        <section className='mb-8 markdown text-justify transition-all' dangerouslySetInnerHTML={{ __html: greetings.html }} />
+        <section className='mb-8 text-justify transition-all markdown' dangerouslySetInnerHTML={{ __html: aboutUs.html }} />
 
         {/* Recent News */}
         <section className='mb-8'>
@@ -73,8 +75,8 @@ export default function Home({ data }) {
 }
 
 export const data = graphql`
-  query Home {
-    greetings: allMarkdownRemark(
+  query {
+    aboutUs: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/greetings_home/"}}
     ) {
       nodes {

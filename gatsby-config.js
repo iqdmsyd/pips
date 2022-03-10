@@ -5,11 +5,25 @@
  */
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: 'Pendidikan Ilmu Pengetahuan Sosial',
+    author: {
+      name: 'Iqdam Musayyad Rabbani'
+    },
+    description: 'Website Resmi Pendidikan Ilmu Pengetahuan Sosial Universitas Pendidikan Indonesia',
+    copyright: '2021 Iqdam Musayyad',
+    siteUrl: 'https://pips.chapdev.site',
+    social: {
+      instagram: 'iqdmsyd',
+      youtube: 'iqdmsyd',
+    }
+  },
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -94,9 +108,4 @@ module.exports = {
       },
     },
   ],
-  siteMetadata: {
-    title: 'Pendidikan Ilmu Pengetahuan Sosial',
-    description: 'Website Resmi Pendidikan Ilmu Pengetahuan Sosial Universitas Pendidikan Indonesia',
-    copyright: '2021 Iqdam Musayyad'
-  }
 }
