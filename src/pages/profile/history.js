@@ -19,7 +19,7 @@ export default function History({ data }) {
       <div className='p-8 lg:p-10'>
         <section id='history' className='space-y-3'>
             <h1 className='text-2xl font-semibold'>{ intl.formatMessage({ id: 'profile.history' }) }</h1>
-            <div className='space-y-3 text-sm text-justify md-text' dangerouslySetInnerHTML={{ __html: history.html }} />
+            <div className='space-y-3 text-sm text-justify markdown' dangerouslySetInnerHTML={{ __html: history.html }} />
           </section>
       </div>
     </Layout>

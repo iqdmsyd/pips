@@ -78,8 +78,8 @@ export default function NeoNavbar() {
                               { subs.map(({ title, url, blank }, idx) => (
                                 <li key={idx}>
                                   { blank
-                                    ? <a href={url} rel="noreferrer" target="_blank" className='block w-full px-4 py-2 text-sm hover:bg-gray-300'>{title}</a>
-                                    : <Link to={url} className='block w-full px-4 py-2 text-sm hover:bg-gray-300'>{title}</Link>}
+                                    ? <a href={url} rel="noreferrer" target="_blank" className='block w-full px-6 py-2 text-sm hover:bg-gray-300'>{title}</a>
+                                    : <Link to={url} className='block w-full px-6 py-2 text-sm hover:bg-gray-300'>{title}</Link>}
                                 </li>
                               )) }
                             </ul>

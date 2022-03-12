@@ -19,7 +19,7 @@ export default function VisionAndMission({ data }) {
       <div className='p-8 lg:p-10'>
         <section id='vision-and-mission' className='space-y-3'>
             <h2 className='text-2xl font-semibold'>{ intl.formatMessage({ id: 'profile.visionAndMission' })}</h2>
-            <div className='space-y-3 text-sm text-justify md-text' dangerouslySetInnerHTML={{ __html: visionAndMission.html }} />
+            <div className='space-y-3 text-sm text-justify markdown' dangerouslySetInnerHTML={{ __html: visionAndMission.html }} />
           </section>
       </div>
     </Layout>

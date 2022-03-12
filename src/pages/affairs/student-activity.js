@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 import { graphql } from 'gatsby';
 import { useIntl } from 'gatsby-plugin-intl'
 
@@ -14,10 +15,11 @@ export default function StudentActivity({ data }) {
 
   return (
     <Layout>
-      <div className='p-8 lg:p-16'>
+      <Seo title={ intl.formatMessage({ id: 'affairs.studentActivity' })} />
+      <div className='p-8 lg:p-10'>
         <section id='student-activity' className='space-y-3'>
             <h1 className='text-2xl font-semibold'>{ intl.formatMessage({ id: 'affairs.studentActivity' }) }</h1>
-            <div className='space-y-3 text-sm text-justify md-text' dangerouslySetInnerHTML={{ __html: studentActivity.html }} />
+            <div className='space-y-3 text-sm text-justify markdown' dangerouslySetInnerHTML={{ __html: studentActivity.html }} />
           </section>
       </div>
     </Layout>
