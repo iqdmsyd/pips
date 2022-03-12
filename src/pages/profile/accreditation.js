@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 import { graphql } from 'gatsby';
 import { useIntl } from 'gatsby-plugin-intl'
 
@@ -14,7 +15,8 @@ export default function Accreditation({ data }) {
 
   return (
     <Layout>
-      <div className='p-8 lg:p-16'>
+      <Seo title={intl.formatMessage({ id: 'profile.accreditation' })} />
+      <div className='p-8 lg:p-10'>
         <section id='accreditation' className='space-y-3'>
             <h1 className='text-2xl font-semibold'>{ intl.formatMessage({ id: 'profile.accreditation' })}</h1>
             <div className='flex flex-col gap-4 basis-1 md:flex-row'>
