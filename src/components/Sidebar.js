@@ -5,28 +5,26 @@ export default function Sidebar() {
   const data = useStaticQuery(graphql`
     query Sidebar {
       recentNews: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/news/"}}
+        filter: {fileAbsolutePath: {regex: "/content/news/"}}
         sort: {fields: frontmatter___date, order: DESC}
         limit: 3
       ) {
         nodes {
           frontmatter {
             title
-            time
             slug
             date
           }
         }
       }
       announcements: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/announcements/"}}
+        filter: {fileAbsolutePath: {regex: "/content/announcements/"}}
         sort: {fields: frontmatter___date, order: DESC}
         limit: 3
       ) {
         nodes {
           frontmatter {
             title
-            time
             slug
             date
           }

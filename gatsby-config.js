@@ -68,15 +68,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `news`,
-        path: `${__dirname}/src/texts/news`,
+        name: `content-news`,
+        path: `${__dirname}/content/news`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `announcements`,
-        path: `${__dirname}/src/texts/announcements`,
+        name: `content-announcements`,
+        path: `${__dirname}/content/announcements`,
       },
     },
     {

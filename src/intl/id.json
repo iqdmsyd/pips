@@ -15,6 +15,10 @@
     "accreditation": "Akreditasi",
     "organization": "Struktur Organisasi"
   },
+  "news": {
+    "news": "Berita",
+    "announcement": "Pengumuman"
+  },
   "academic": {
     "curriculum": "Kurikulum",
     "calendar": "Kalender Akademik"

@@ -6,6 +6,9 @@
       { "title": "Accreditation", "url": "/profile/accreditation" },
       { "title": "Organization", "url": "/profile/organization" }
     ] },
+    {
+      "title": "News", "url":"/news"
+    },
     { "title": "Academic", "url":"#", "subs": [
       { "title": "Curriculum", "url": "/academic/curriculum" },
       { "title": "Academic Calendar", "url": "/academic/calendar" },
@@ -48,6 +51,9 @@
       { "title": "Akreditasi", "url": "/profile/accreditation" },
       { "title": "Organisasi", "url": "/profile/organization" }
     ] },
+    {
+      "title": "Berita", "url":"/news"
+    },
     { "title": "Akademik", "url":"#", "subs": [
       { "title": "Kurikulum", "url": "/academic/curriculum" },
       { "title": "Kalender Akademik", "url": "/academic/calendar" },

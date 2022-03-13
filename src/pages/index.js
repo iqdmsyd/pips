@@ -87,7 +87,7 @@ export const data = graphql`
       }
     }
     recentNews: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/news/"}}
+      filter: {fileAbsolutePath: {regex: "/content/news/"}}
       sort: {fields: frontmatter___date, order: DESC}
       limit: 3
     ) {
