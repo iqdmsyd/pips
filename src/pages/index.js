@@ -2,7 +2,7 @@ import React from 'react'
 import Carousel from '../components/Carousel'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import NewsItem from '../components/NewsItem'
+import RecentNews from '../components/RecentNews'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faDownload, faFilePdf, faLink, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { graphql } from 'gatsby'
@@ -28,8 +28,8 @@ export default function Home({ data }) {
         <section className='mb-8'>
           <h1 className='mb-4 text-2xl font-bold 2xl:text-3xl'>{ intl.formatMessage({ id: "home.recentNews" }) }</h1>
           <div className='flex flex-col gap-6 md:basis-1/3 md:flex-row'>
-            { recentNews.nodes.map( item => (
-              <NewsItem key={item.id} item={item}/>
+            { recentNews.nodes.map( news => (
+              <RecentNews key={news.id} news={news}/>
             )) }
           </div>
         </section>

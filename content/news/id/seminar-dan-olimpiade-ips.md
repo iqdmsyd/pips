@@ -6,9 +6,8 @@ time: 10:10:00
 status: published
 slug: yogyakarta-punya-cerita
 lang: id
+image: panigale-v4r.jpg
 ---
-
-# Seminar Pendidikan dan Olimpiade IPS Bagi Guru IPS Se-Jawa Barat
 
 Jum’at, 13 November 2020 Prodi Pendidikan IPS telah menyelenggarakan kegiatan Olimpiade Guru IPS tingkat Nasional yang dilaksanakan secara daring. Kegiatan ini merupakan agenda rutin Prodi setiap tahun, namun ada yang berbeda di tahun ini olimpiade dilaksanakan secara daring untuk pertamakalinya. Meskipun demikian, melalui kerja keras panitia dan komunikasi yang intensif kegiatan berjalan lancer sesuai harapan tanpa kendala yang berarti.
 

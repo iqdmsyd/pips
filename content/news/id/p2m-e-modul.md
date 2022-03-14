@@ -6,9 +6,8 @@ time: 13:25:00
 status: published
 slug: p2m-e-modul
 lang: id
+image: panigale-v4r.jpg
 ---
-
-# P2M E-Modul
 
 Tim Prodi Pendidikan IPS SPs UPI Sekolah Pascasarjana Universitas Pendidikan Indonesia telah melaksanakan kegiatan Pengabdian Pada Masyarakat. Pengabdian bertajuk tema “Penguatan Kompetensi Guru IPS Melalui Pengembangan Media E-Modul Dalam Pembelajaran Daring” ini dilatarbelakangi oleh kebutuhan guru-guru di lapangan dalam menyediakan sumber belajar yang variative dalam pembelajaran jarak jauh di tengah pandemi Covid-19.
 

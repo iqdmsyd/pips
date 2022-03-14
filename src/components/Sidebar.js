@@ -1,7 +1,12 @@
-import { graphql, Link, useStaticQuery } from 'gatsby'
 import React from 'react'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function Sidebar() {
+  const intl = useIntl()
   const data = useStaticQuery(graphql`
     query Sidebar {
       recentNews: allMarkdownRemark(
@@ -13,7 +18,7 @@ export default function Sidebar() {
           frontmatter {
             title
             slug
-            date
+            date(formatString: "MMMM, Do YYYY")
           }
         }
       }
@@ -26,7 +31,7 @@ export default function Sidebar() {
           frontmatter {
             title
             slug
-            date
+            date(formatString: "MMMM, Do YYYY")
           }
         }
       }
@@ -38,31 +43,35 @@ export default function Sidebar() {
   return (
     <div className='space-y-9'>
       <div>
-        <h2 className='mb-3 text-lg font-semibold lg:text-xl 2xl:text-2xl'>Recent News</h2>
-        <ul className='space-y-3'>
+        <h1 className='mb-4 text-lg font-bold lg:text-xl 2xl:text-2xl'>{ intl.formatMessage({ id: 'home.recentNews'}) }</h1>
+        <ul className='space-y-2'>
           { recentNews.nodes.map((item, idx) => (
             <li key={idx}>
-              <h5 className='-mb-1 text-sm leading-4 lg:text-base lg:leading-none hover:underline'>
+              <h3 className='font-semibold lg:text-base hover:underline'>
                 <Link to={'/news/' + item.frontmatter.slug}>
                   {item.frontmatter.title}
                 </Link>
-              </h5>
-              <span className='text-xs lg:text-sm'>{new Date(item.frontmatter.date).toDateString()}</span>
+              </h3>
+              <span className='flex items-center mb-2 text-sm text-gray-500'>
+                <FontAwesomeIcon icon={faCalendarAlt} size='xs' className='mr-1'/>{ item.frontmatter.date }
+              </span>
             </li>
           ))}
         </ul>
       </div>
       <div>
-        <h2 className='mb-3 text-lg font-semibold lg:text-xl 2xl:text-2xl'>Annoucements</h2>
-        <ul className='space-y-3'>
+        <h1 className='mb-4 text-lg font-bold lg:text-xl 2xl:text-2xl'>{ intl.formatMessage({ 'id': 'home.announcements' }) }</h1>
+        <ul className='space-y-2'>
         { announcements.nodes.map((item, idx) => (
             <li key={idx}>
-              <h5 className='-mb-1 text-sm leading-4 lg:text-base lg:leading-none hover:underline'>
+              <h3 className='font-semibold lg:text-base hover:underline'>
                 <Link to={'/announcements/' + item.frontmatter.slug}>
                   {item.frontmatter.title}
                 </Link>
-              </h5>
-              <span className='text-xs lg:text-sm'>{new Date(item.frontmatter.date).toDateString()}</span>
+              </h3>
+              <span className='flex items-center mb-2 text-sm text-gray-500'>
+                <FontAwesomeIcon icon={faCalendarAlt} size='xs' className='mr-1'/>{ item.frontmatter.date }
+              </span>
             </li>
           ))}
         </ul>

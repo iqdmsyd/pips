@@ -6,9 +6,8 @@ time: 9:18:00
 status: published
 slug: pengabdian-pada-masyarakat
 lang: id
+image: panigale-v4r.jpg
 ---
-
-# Pengabdian Pada  Masyarakat
 
 Puluhan mahasiswa Program Studi Pendidikan Ilmu Pengetahuan Sosial (PIPS) Universitas Pendidikan Indonesia (UPI) Bandung angkatan 2016,2017, dan 2018 menggelar pengabdian kepada masyarakat dengan didampingi beberapa dosen PIPS sebagai perwakilan, yakni: bapak Muhammad Arief Rakhman, ibu Mina Holilah, ibu Dina Siti Logayah dan ibu Diana Nur Anggraeni Kegiatan ini dibuka oleh bapak Kaprodi yakni, Dr. Dadang Sundawa.
 

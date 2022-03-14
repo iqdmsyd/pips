@@ -6,9 +6,8 @@ time: 10:40:00
 status: published
 slug: yogyakarta-punya-cerita
 lang: id
+image: panigale-v4r.jpg
 ---
-
-# Yogyakarta Selalu Punya Cerita
 
 Yogyakarata, merupakan sebuah kota yang selalu memberi kejutan setiap kali kita mengunjunginya. Pada kali ini, kami Pendidikan IPS UPI angkatan 2018 berkesempatan untuk menggali ilmu di kota Jogjakarta. Kami bertolak dari kampus tercinta pada Rabu, 27 November 2019 dan sampai pada keesokan harinya Kamis, 28 November 2019. Ada beberapa destinasi yang kami kunjungi untuk melakukan observasi. Pertama, kami melakukan kunjungan ke sebuah desa wisata yang berlokasi kurang lebih 5 KM dari Monumen Jogja Kembali. Desa tersebut adalah desa wisata tanjung. Sesampainya disana kami diberi sambutan hangat oleh salah satu warga desa tanjung yang merupakan pengelola desa wisata tersebut. Kemudian kami langsung diarahkan untuk melihat salah satu rumah joglo bersejarah yang kini sudah tak lagi berpenghuni. Konon katanya, tiang penyangga dari bangunan rumah joglo tersebut terbuat dari kayu nangka yang telah berumur cukup tua sekitar 200 tahun. Sebagian masyarakat desa tanjung ini berprofesi sebagai petani. Lingkungan yang masih asri dan masyarakat yang masih melestarikan kesenian tradisional menjadi daya tarik tersendiri bagi desa tanjung ini. Tidak hanya itu, kami pun disuguhi oleh makanan tradisional khas yang bernama sagon, kudapan manis yang terbuat dari kelapa dan juga beras ketan putih selain itu kami juga diajarkan beberapa tarian tradisional mereka.
 

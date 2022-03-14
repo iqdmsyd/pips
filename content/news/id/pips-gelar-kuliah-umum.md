@@ -6,9 +6,8 @@ time: 9:06:00
 status: published
 slug: pips-gelar-kuliah-umum
 lang: id
+image: panigale-v4r.jpg
 ---
-
-# Prodi Pendidikan IPS Gelar Kuliah Umum Generasi Muda Milenia
 
 Prodi Pendidikan Ilmu Pengetahuan Sosial FPIPS UPI menggelar kuliah umum yang bertema Peluang dan Tantangan Pendidikan IPS di Era Generasi Muda Milenia dalam Perpektif Historis dan Filosofis, di Auditorium FPIPS UPI jln. Dr. Setiabudhi. No. 229 Bandung. Jumat, (22/12).
 

@@ -2,9 +2,9 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons'
 
-export default function NewsItem({ item }) {
-  let { title, slug, date, time } = item.frontmatter;
-  let { html: content } = item;
+export default function RecentNews({ news }) {
+  let { title, slug, date, time } = news.frontmatter;
+  let { html: content } = news;
 
   function makePreview(ctn) {
     return ctn.substring(0, 250) + '...'
