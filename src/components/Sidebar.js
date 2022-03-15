@@ -1,16 +1,15 @@
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
-
 
 export default function Sidebar() {
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     query Sidebar {
-      recentNews: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/content/news/"}}
+      recentNews_EN: allMarkdownRemark(
+        filter: {frontmatter: {lang: {eq: "en"}},  fileAbsolutePath: {regex: "/content/news/"}}
         sort: {fields: frontmatter___date, order: DESC}
         limit: 3
       ) {
@@ -22,8 +21,34 @@ export default function Sidebar() {
           }
         }
       }
-      announcements: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/content/announcements/"}}
+      recentNews_ID: allMarkdownRemark(
+        filter: {frontmatter: {lang: {eq: "id"}},  fileAbsolutePath: {regex: "/content/news/"}}
+        sort: {fields: frontmatter___date, order: DESC}
+        limit: 3
+      ) {
+        nodes {
+          frontmatter {
+            title
+            slug
+            date(formatString: "MMMM, Do YYYY")
+          }
+        }
+      }
+      announcements_EN: allMarkdownRemark(
+        filter: {frontmatter: {lang: {eq: "en"}}, fileAbsolutePath: {regex: "/content/announcements/"}}
+        sort: {fields: frontmatter___date, order: DESC}
+        limit: 3
+      ) {
+        nodes {
+          frontmatter {
+            title
+            slug
+            date(formatString: "MMMM, Do YYYY")
+          }
+        }
+      }
+      announcements_ID: allMarkdownRemark(
+        filter: {frontmatter: {lang: {eq: "id"}}, fileAbsolutePath: {regex: "/content/announcements/"}}
         sort: {fields: frontmatter___date, order: DESC}
         limit: 3
       ) {
@@ -38,7 +63,9 @@ export default function Sidebar() {
     }
   `)
 
-  const { recentNews, announcements } = data;
+  const { recentNews_EN, recentNews_ID, announcements_EN, announcements_ID } = data;
+  const recentNews = intl.locale === 'id' ? recentNews_ID : recentNews_EN
+  const announcements = intl.locale === 'id' ? announcements_ID : announcements_EN
 
   return (
     <div className='space-y-9'>

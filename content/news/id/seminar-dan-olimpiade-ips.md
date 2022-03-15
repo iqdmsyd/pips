@@ -4,7 +4,7 @@ author: Admin
 date: 2019-11-12
 time: 10:10:00
 status: published
-slug: yogyakarta-punya-cerita
+slug: seminar-dan-olimpiade-ips
 lang: id
 image: panigale-v4r.jpg
 ---

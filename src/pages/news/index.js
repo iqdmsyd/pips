@@ -53,6 +53,7 @@ export const data = graphql`
           image
         }
         html
+        id
       }
     }
     news_ID: allMarkdownRemark(
@@ -72,6 +73,7 @@ export const data = graphql`
           image
         }
         html
+        id
       }
     }
     announcements_EN: allMarkdownRemark(
