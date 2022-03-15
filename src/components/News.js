@@ -34,7 +34,7 @@ export default function News({ news }) {
           <FontAwesomeIcon icon={faClock} size='xs' className='ml-2 mr-1'/>{ makeTime(time) }
         </span>
         <a href={`/${intl.locale}/news/${slug}`} className='text-gray-500 hover:underline'>
-          <p dangerouslySetInnerHTML={{ __html: makePreview(content) }}/>
+          <div dangerouslySetInnerHTML={{ __html: makePreview(content) }}/>
         </a>
       </div>
     </div>
