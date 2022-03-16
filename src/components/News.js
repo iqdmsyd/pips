@@ -22,9 +22,11 @@ export default function News({ news }) {
 
   return (
     <div className='grid-cols-4 gap-4 mb-8 md:grid'>
-      <div className='col-span-1'>
-        <img src={`/${image}`} alt='' className='w-full mt-1' />
-      </div>
+      { image && (
+        <div className='col-span-1'>
+          <img src={`/${image}`} alt='' className='w-full mt-1' />
+        </div>
+      ) }
       <div className='col-span-3'>
         <h2 className='text-xl font-semibold hover:underline'>
           <Link to={`/${intl.locale}/news/${slug}`}>{title}</Link>

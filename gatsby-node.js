@@ -6,10 +6,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
     {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/news/"}}) {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/"}}) {
         nodes {
           frontmatter {
-            lang
             slug
           }
         }
@@ -25,7 +24,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const newsPostTemplate = path.resolve(`src/templates/news-post.js`)
   result.data.allMarkdownRemark.nodes.forEach(node => {
-    const { lang, slug } = node.frontmatter
+    const { slug } = node.frontmatter
     const path = `/news/${slug}`
     createPage({
       path,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
 import News from '../../components/News'
@@ -9,9 +9,20 @@ import { useIntl } from 'gatsby-plugin-intl'
 
 export default function NewsPage({ data }) {
   const intl = useIntl()
-  const { news_EN, news_ID } = data
+  const [ tabOpen, setTabOpen ] = useState({ news: true, annoncements: false })
+  const { news_EN, news_ID, announcements_EN, announcements_ID } = data
 
   const listNews = intl.locale === 'id' ? news_ID : news_EN
+  const listAnnouncements = intl.locale === 'id' ? announcements_ID : announcements_EN
+
+  const changeWhichTabOpen = (tab) => {
+    setTabOpen(prev => {
+      return {
+        ...prev,
+        ...tab
+      }
+    })
+  }
 
   return (
     <Layout>
@@ -19,13 +30,36 @@ export default function NewsPage({ data }) {
       <div className='p-8 lg:p-10'>
         <section className='gap-8 md:grid lg:gap-10 md:grid-cols-3 lg:grid-cols-4'>
           <div className='md:col-span-2 lg:col-span-3'>
-            <h1 className='mb-4 text-2xl font-bold 2xl:text-3xl'>{ intl.formatMessage({ id: "news.news" }) }</h1>
-            <ul>
-              { listNews.nodes.map((news) => (
-                  <News key={news.id} news={news} />
-                ))
-              }
-            </ul>
+            <div className='flex mb-4 space-x-8'>
+              <button
+                className={`text-2xl 2xl:text-3xl ${tabOpen.news ? 'font-bold' : 'text-gray-500'} `}
+                onClick={() => changeWhichTabOpen({ news: true, annoncements: false })}
+              >
+                { intl.formatMessage({ id: "news.news" }) }
+              </button>
+              <button
+                className={`text-2xl 2xl:text-3xl ${tabOpen.annoncements ? 'font-bold' : 'text-gray-500'}`}
+                onClick={() => changeWhichTabOpen({ news: false, annoncements: true })}
+              >
+                { intl.formatMessage({ id: 'news.announcement' }) }
+              </button>
+            </div>
+            { tabOpen.news && (
+              <ul>
+                { listNews.nodes.map((news) => (
+                    <News key={news.id} news={news} />
+                  ))
+                }
+              </ul>
+            )}
+            { tabOpen.annoncements && (
+              <ul>
+                { listAnnouncements.nodes.map((news) => (
+                    <News key={news.id} news={news} />
+                  ))
+                }
+              </ul>
+            )}
           </div>
           <Sidebar />
         </section>
@@ -39,7 +73,6 @@ export const data = graphql`
     news_EN: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/content/news/"}, frontmatter: {lang: {eq: "en"}}}
       sort: {fields: frontmatter___date, order: DESC}
-      limit: 5
     ) {
       nodes {
         frontmatter {
@@ -59,7 +92,6 @@ export const data = graphql`
     news_ID: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/content/news/"}, frontmatter: {lang: {eq: "id"}}}
       sort: {fields: frontmatter___date, order: DESC}
-      limit: 5
     ) {
       nodes {
         frontmatter {
@@ -78,7 +110,6 @@ export const data = graphql`
     }
     announcements_EN: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/content/announcements/"}, frontmatter: {lang: {eq: "en"}}}
-      limit: 5
       sort: {fields: frontmatter___date, order: DESC}
     ) {
       nodes {
@@ -92,11 +123,11 @@ export const data = graphql`
           time
         }
         html
+        id
       }
     }
     announcements_ID: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/content/announcements/"}, frontmatter: {lang: {eq: "id"}}}
-      limit: 5
       sort: {fields: frontmatter___date, order: DESC}
     ) {
       nodes {
@@ -110,6 +141,7 @@ export const data = graphql`
           time
         }
         html
+        id
       }
     }
   }

@@ -45,7 +45,7 @@ const NewsPost = ({ data }) => {
 export const query = graphql`
   query ($slug: String!) {
     allMarkdownRemark(
-      filter: {frontmatter: {slug: {eq: $slug}}, fileAbsolutePath: {regex: "/content/news/"}}
+      filter: {frontmatter: {slug: {eq: $slug}}, fileAbsolutePath: {regex: "/content/"}}
     ) {
       nodes {
         frontmatter {

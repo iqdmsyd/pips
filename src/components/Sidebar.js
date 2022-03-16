@@ -11,7 +11,7 @@ export default function Sidebar() {
       recentNews_EN: allMarkdownRemark(
         filter: {frontmatter: {lang: {eq: "en"}},  fileAbsolutePath: {regex: "/content/news/"}}
         sort: {fields: frontmatter___date, order: DESC}
-        limit: 3
+        limit: 5
       ) {
         nodes {
           frontmatter {
@@ -24,7 +24,7 @@ export default function Sidebar() {
       recentNews_ID: allMarkdownRemark(
         filter: {frontmatter: {lang: {eq: "id"}},  fileAbsolutePath: {regex: "/content/news/"}}
         sort: {fields: frontmatter___date, order: DESC}
-        limit: 3
+        limit: 5
       ) {
         nodes {
           frontmatter {
@@ -37,7 +37,7 @@ export default function Sidebar() {
       announcements_EN: allMarkdownRemark(
         filter: {frontmatter: {lang: {eq: "en"}}, fileAbsolutePath: {regex: "/content/announcements/"}}
         sort: {fields: frontmatter___date, order: DESC}
-        limit: 3
+        limit: 5
       ) {
         nodes {
           frontmatter {
@@ -50,7 +50,7 @@ export default function Sidebar() {
       announcements_ID: allMarkdownRemark(
         filter: {frontmatter: {lang: {eq: "id"}}, fileAbsolutePath: {regex: "/content/announcements/"}}
         sort: {fields: frontmatter___date, order: DESC}
-        limit: 3
+        limit: 5
       ) {
         nodes {
           frontmatter {
@@ -92,7 +92,7 @@ export default function Sidebar() {
         { announcements.nodes.map((item, idx) => (
             <li key={idx}>
               <h3 className='font-semibold lg:text-base hover:underline'>
-                <Link to={'/announcements/' + item.frontmatter.slug}>
+                <Link to={'/news/' + item.frontmatter.slug}>
                   {item.frontmatter.title}
                 </Link>
               </h3>
