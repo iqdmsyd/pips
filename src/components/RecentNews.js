@@ -29,7 +29,7 @@ export default function RecentNews({ news }) {
         <FontAwesomeIcon icon={faClock} size='xs' className='ml-2 mr-1'/>{ makeTime(time) }
       </span>
       <Link to={'/news/' + slug} className='text-gray-500 hover:underline'>
-        <p dangerouslySetInnerHTML={{ __html: makePreview(content) }}/>
+        <div dangerouslySetInnerHTML={{ __html: makePreview(content) }}/>
       </Link>
     </div>
   )
