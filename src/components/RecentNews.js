@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'gatsby';
 
 export default function RecentNews({ news }) {
   let { title, slug, date, time } = news.frontmatter;
@@ -27,9 +28,9 @@ export default function RecentNews({ news }) {
         <FontAwesomeIcon icon={faCalendarAlt} size='xs' className='mr-1'/>{ date }
         <FontAwesomeIcon icon={faClock} size='xs' className='ml-2 mr-1'/>{ makeTime(time) }
       </span>
-      <a href={'/news/' + slug} className='text-gray-500 hover:underline'>
+      <Link to={'/news/' + slug} className='text-gray-500 hover:underline'>
         <p dangerouslySetInnerHTML={{ __html: makePreview(content) }}/>
-      </a>
+      </Link>
     </div>
   )
 }

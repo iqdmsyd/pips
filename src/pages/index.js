@@ -5,16 +5,18 @@ import Seo from '../components/Seo'
 import RecentNews from '../components/RecentNews'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faDownload, faFilePdf, faLink, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 import links from '../texts/home/links.json';
 
 export default function Home({ data }) {
-  let { aboutUs, recentNews } = data;
+  let { aboutUs, recentNews_EN, recentNews_ID, announcements_EN, announcements_ID } = data;
   const intl = useIntl();
 
   // filter data
   aboutUs = aboutUs.nodes.filter(grt => grt.frontmatter.lang === intl.locale)[0];
+  const recentNews = intl.locale === 'id' ? recentNews_ID : recentNews_EN
+  const announcement = intl.locale === 'id' ? announcements_ID : announcements_EN
 
   return (
     <Layout>
@@ -40,11 +42,14 @@ export default function Home({ data }) {
             <div className='w-full mb-4'>
               <h1 className='mb-2 text-2xl font-medium 2xl:text-3xl'><FontAwesomeIcon icon={faInfoCircle} size='sm' className='mr-1'/>{ intl.formatMessage({ id: "home.announcements" }) }</h1>
               <ul className=''>
-                { links[intl.locale].map(({title, url}, idx) => (
-                  <li key={idx}>
-                    <a href={url} className='hover:underline'> <FontAwesomeIcon icon={faLink} className='mr-2' size='sm'/>{title}</a>
+                { announcement.nodes.map(node => (
+                  <li key={node.id}>
+                    <Link to={`/news/` + node.frontmatter.slug} className='hover:underline'>
+                      <FontAwesomeIcon icon={faLink} className='mr-2' size='sm'/>{node.frontmatter.title}
+                    </Link>
                   </li>
-                ))}
+                ))
+                }
               </ul>
             </div>
             <div className='w-full mb-4'>
@@ -86,8 +91,8 @@ export const data = graphql`
         html
       }
     }
-    recentNews: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/content/news/"}}
+    recentNews_EN: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/content/news/"}, frontmatter: {lang: {eq: "en"}}}
       sort: {fields: frontmatter___date, order: DESC}
       limit: 3
     ) {
@@ -99,6 +104,48 @@ export const data = graphql`
           date(formatString: "MMMM Do, YYYY")
         }
         html
+        id
+      }
+    }
+    recentNews_ID: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/content/news/"}, frontmatter: {lang: {eq: "id"}}}
+      sort: {fields: frontmatter___date, order: DESC}
+      limit: 3
+    ) {
+      nodes {
+        frontmatter {
+          title
+          time
+          slug
+          date(formatString: "MMMM Do, YYYY")
+        }
+        html
+        id
+      }
+    }
+    announcements_EN: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/content/announcements/"}, frontmatter: {lang: {eq: "en"}}}
+      sort: {fields: frontmatter___date, order: DESC}
+      limit: 10
+    ) {
+      nodes {
+        frontmatter {
+          title
+          slug
+        }
+        id
+      }
+    }
+    announcements_ID: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/content/announcements/"}, frontmatter: {lang: {eq: "id"}}}
+      sort: {fields: frontmatter___date, order: DESC}
+      limit: 10
+    ) {
+      nodes {
+        frontmatter {
+          title
+          slug
+        }
         id
       }
     }
