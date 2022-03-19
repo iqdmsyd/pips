@@ -25,32 +25,32 @@ body {
   height: 100%;
 }
 
-#vision-and-mission li {
-  @apply list-decimal list-outside ml-3
+.markdown li {
+  @apply list-decimal list-outside ml-3 mb-3 text-sm md:text-base
 }
 
-#student-mobility li {
-  @apply list-decimal list-outside ml-3
+.markdown table {
+  @apply mb-4 border-2
 }
 
-#student-activity li {
-  @apply list-decimal list-outside ml-3
-}
-
-#vision-and-mission h3 {
-  @apply text-lg
+.markdown th, .markdown td {
+  @apply px-4 py-2 min-w-min text-sm md:text-base
 }
 
 .markdown h1 {
-  @apply text-2xl xl:text-3xl font-bold mb-4
+  @apply text-2xl 2xl:text-3xl font-bold mb-4
 }
 
 .markdown h2 {
-  @apply text-lg xl:text-xl font-semibold mb-3
+  @apply text-lg 2xl:text-xl font-semibold mb-3
+}
+
+.markdown h3 {
+  @apply font-semibold 2xl:text-lg
 }
 
 .markdown p {
-  @apply mb-3
+  @apply mb-3 text-sm md:text-base
 }
 
 .markdown a {

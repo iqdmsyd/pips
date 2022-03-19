@@ -8,4 +8,4 @@ Program Studi Pendidikan Ilmu Pengetahuan Sosial
 Fakultas Pendidikan Ilmu Pengetahuan Sosial
 Universitas Pendidikan Indonesia
 
-Laboris amet minim fugiat adipisicing est excepteur ad ea elit. Duis nisi elit reprehenderit ex sint qui exercitation adipisicing. Nulla occaecat voluptate minim nisi cupidatat tempor ut commodo ex ullamco est dolore id. Non ea fugiat sit incididunt cupidatat minim nostrud tempor qui labore laborum minim. Veniam enim incididunt cillum dolor incididunt non.
+Berdasarkan Surat Keputusan BAN-PT Nomor 128/SK/BANPT/Akred/S/II/2019, disebutkan bahwa Program Studi Pendidikan Ilmu Sosial pada Program Sarjana Universitas Pendidikan Indoneisa Bandung terakreditasi dengan peringkat: **Terakreditasi A**. Berlaku mulai 19 Februari 2019 sampai dengan 19 Februari 2024.
