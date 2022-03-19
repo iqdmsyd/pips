@@ -35,14 +35,20 @@ export default function NeoNavbar() {
           <span className='hidden mr-2 md:block'>
             <FontAwesomeIcon icon={faLanguage} className='text-white' size='lg'/>
           </span>
-          <button className='relative flex px-2 text-xs text-white align-middle md:text-sm'  onClick={ () => setChangeLangOpen(c => !c) }>
+          <div
+            className='relative flex px-2 text-xs text-white align-middle md:text-sm'
+            role='button'
+            tabIndex={0}
+            onClick={ () => setChangeLangOpen(c => !c) }
+            onKeyDown={ () => setChangeLangOpen(c => !c)}
+          >
             { (intl.locale).toUpperCase() }
             <span><FontAwesomeIcon icon={faChevronDown} className='ml-2 text-xs'/></span>
             { changeLangOpen && <div className='absolute left-0 z-50 w-full pt-2 text-white bg-black top-full'>
               <button className='block w-full py-1 hover:bg-gray-500' onClick={() => changeLang('en')}>EN</button>
               <button className='block w-full py-1 hover:bg-gray-500' onClick={() => changeLang('id')}>ID</button>
             </div> }
-          </button>
+          </div>
 
           <ul className='flex gap-4 ml-auto'>
             <li><FontAwesomeIcon icon={faInstagram} className='text-white'/></li>
