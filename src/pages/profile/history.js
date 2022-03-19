@@ -1,8 +1,9 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
-import { graphql } from 'gatsby';
-import { useIntl } from 'gatsby-plugin-intl'
+import HeadingOne from '../../components/Headings/HeadingOne'
 
 const filterContent = (ctx, lang) => {
   return ctx.filter(c => c.frontmatter.lang === lang)[0]
@@ -17,9 +18,11 @@ export default function History({ data }) {
     <Layout>
       <Seo title={intl.formatMessage({ id: 'profile.history' })} />
       <div className='p-8 lg:p-10'>
-        <section id='history' className='space-y-3'>
-            <h1 className='text-2xl font-semibold'>{ intl.formatMessage({ id: 'profile.history' }) }</h1>
-            <div className='space-y-3 text-sm text-justify markdown' dangerouslySetInnerHTML={{ __html: history.html }} />
+        <section id='history'>
+            <HeadingOne>
+              { intl.formatMessage({ id: 'profile.history' }) }
+            </HeadingOne>
+            <div className='text-justify markdown' dangerouslySetInnerHTML={{ __html: history.html }} />
           </section>
       </div>
     </Layout>

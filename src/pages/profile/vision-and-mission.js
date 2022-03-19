@@ -1,8 +1,9 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
-import { graphql } from 'gatsby';
-import { useIntl } from 'gatsby-plugin-intl'
+import HeadingOne from '../../components/Headings/HeadingOne'
 
 const filterContent = (ctx, lang) => {
   return ctx.filter(c => c.frontmatter.lang === lang)[0]
@@ -17,9 +18,11 @@ export default function VisionAndMission({ data }) {
     <Layout>
       <Seo title={intl.formatMessage({ id: 'profile.visionAndMission' })} />
       <div className='p-8 lg:p-10'>
-        <section id='vision-and-mission' className='space-y-3'>
-            <h2 className='text-2xl font-semibold'>{ intl.formatMessage({ id: 'profile.visionAndMission' })}</h2>
-            <div className='space-y-3 text-sm text-justify markdown' dangerouslySetInnerHTML={{ __html: visionAndMission.html }} />
+        <section id='vision-and-mission'>
+            <HeadingOne>
+              { intl.formatMessage({ id: 'profile.visionAndMission' })}
+            </HeadingOne>
+            <div className='text-justify markdown' dangerouslySetInnerHTML={{ __html: visionAndMission.html }} />
           </section>
       </div>
     </Layout>

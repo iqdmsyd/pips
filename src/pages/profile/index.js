@@ -1,9 +1,10 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
+import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
-import { graphql } from 'gatsby';
-import { useIntl } from 'gatsby-plugin-intl'
-import { StaticImage } from 'gatsby-plugin-image';
+import HeadingOne from '../../components/Headings/HeadingOne'
 
 const filterContent = (ctx, lang) => {
   return ctx.filter(c => c.frontmatter.lang === lang)[0]
@@ -22,10 +23,12 @@ export default function Profile({ data }) {
 
         {/* greetings */}
         <section id='greetings' className='space-y-3'>
-          <h1 className='text-2xl font-semibold'>{ intl.formatMessage({ id: 'profile.greetings' }) }</h1>
+          <HeadingOne>
+            { intl.formatMessage({ id: 'profile.greetings' }) }
+          </HeadingOne>
           <figure>
             <StaticImage src='../../../static/ketua_prodi.jpg' alt=''/>
-            <figcaption className='text-xs text-center text-gray-500 md:text-left'>Prof. Dr. Sapriya, M.Ed</figcaption>
+            <figcaption className='text-xs text-center text-gray-500 md:text-sm md:text-left'>Prof. Dr. Sapriya, M.Ed</figcaption>
           </figure>
 
           {/* old figure without static image */}
@@ -33,8 +36,8 @@ export default function Profile({ data }) {
             <img src='/ketua_prodi.jpg' alt='' className='w-full mx-auto md:w-10/12'/>
             <figcaption className='text-xs text-center text-gray-500'>Prof. Dr. Sapriya, M.Ed</figcaption>
           </figure> */}
-          <div className='space-y-3 text-sm text-justify' dangerouslySetInnerHTML={{ __html: greetings.html }} />
-          <div className='text-sm'>
+          <div className='space-y-3 text-justify markdown' dangerouslySetInnerHTML={{ __html: greetings.html }} />
+          <div className='markdown'>
             { intl.locale === 'id' ? <>
             <p>Ketua Program Studi Pendidikan Ilmu Pengetahuan Sosial</p>
             <p>Fakultas Ilmu Sosial Pendidikan</p>
