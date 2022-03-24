@@ -6,7 +6,7 @@ time: 21:26:00
 status: published
 slug: olimpiade-dan-p2m-daring
 lang: id
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 Jum’at, 13 November 2020 Prodi Pendidikan IPS telah menyelenggarakan kegiatan Olimpiade Guru IPS tingkat Nasional yang dilaksanakan secara daring. Kegiatan ini merupakan agenda rutin Prodi setiap tahun, namun ada yang berbeda di tahun ini olimpiade dilaksanakan secara daring untuk pertamakalinya. Meskipun demikian, melalui kerja keras panitia dan komunikasi yang intensif kegiatan berjalan lancer sesuai harapan tanpa kendala yang berarti.

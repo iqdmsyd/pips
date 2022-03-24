@@ -6,7 +6,7 @@ time: 17:25:00
 status: published
 slug: olimpiade-guru-ips
 lang: id
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 Revolusi Industri 4.0 ialah fase terkini dari perkembangan teknologi yang tengah menghampiri dunia global. Era revolusi industri 4.0 tidak dapat dipungkiri akan membawa dampak yang tidak sederhana, bahkan berdampak pada seluruh aspek kehidupan manusia termasuk dalam aspek pendidikan. Oleh sebab itu, maka perlu ada respon yang baik dari berbagai elemen untuk memprediksi masa depan revolusi industry 4.o, sehingga setiap elemen tersebut dapat mengantisipasi segala permasalahan dan tantangan yang mungkin akan menghampiri sebagai dapat dari adanya revolusi industry 4.0 tersebut.

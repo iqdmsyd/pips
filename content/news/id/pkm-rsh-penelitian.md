@@ -6,7 +6,7 @@ time: 10:26:00
 status: published
 slug: pkm-rsh-penelitian
 lang: id
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 Tim Program Kreativitas Mahasiswa Prodi Pendidikan IPS FPIPS melakukan penelitian mengenai Pengaruh Work-Study Conflict Terhadap Psychological Well-Being Yang Dialami Mahasiswa UPI.

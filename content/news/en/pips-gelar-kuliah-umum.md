@@ -6,7 +6,7 @@ time: 9:06:00
 status: published
 slug: pips-gelar-kuliah-umum
 lang: en
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 The Social Sciences Education Study Program, FPIPS UPI, held a public lecture with the theme of Opportunities and Challenges of Social Science Education in the Era of the Millennial Young Generation in Historical and Philosophical Perspectives, at the Auditorium of FPIPS UPI, Jl. Dr. Setiabudhi. No. 229 Bandung. Friday, (12/22).

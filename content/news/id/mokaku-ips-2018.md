@@ -6,7 +6,7 @@ time: 9:03:00
 status: published
 slug: mokaku-ips-2018
 lang: id
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 Ratusan mahasiswa baru Universitas Pendidikan Indonesia (UPI) Bandung angkatan 2018 memenuhi pelataran Gedung Gymnasium UPI dalam rangka melaksanakan Masa Orientasi Kampus (MOKAKU), Termasuk mahasiswa baru program studi Pendidikan Ilmu Pengetahuan Sosial. Kegiatan Masa Orientasi Kampus (MOKAKU) ini merupakan kegiatan tahunan yang diselenggarakan setiap awal tahun ajaran sebagai sarana pengenalan kampus pada mahasiswa baru.

@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import HeadingThree from './Headings/HeadingThree';
 
 export default function RecentNews({ news }) {
-  let { title, slug, date, time } = news.frontmatter;
+  let { title, slug, date, time, image } = news.frontmatter;
   let { html: content } = news;
 
   function makePreview(ctn) {
@@ -23,7 +23,7 @@ export default function RecentNews({ news }) {
 
   return (
     <div>
-      <img src='/panigale-v4r.jpg' alt='' className='w-full'/>
+      <img src={`/${image}`} alt='' className='w-full'/>
       {/* <h3 className='font-semibold hover:underline'><a href={'/news/' + slug}>{ title }</a></h3> */}
       <HeadingThree>
         <Link className='hover:underline' to={'/news/' + slug}>{ title }</Link>

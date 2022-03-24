@@ -6,7 +6,7 @@ time: 10:26:00
 status: published
 slug: pkm-rsh-penelitian
 lang: en
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 The FPIPS Social Sciences Education Study Program Student Creativity Program Team conducted research on the Effect of Work-Study Conflict on Psychological Well-Being Experienced by UPI Students.

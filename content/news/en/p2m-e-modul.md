@@ -6,7 +6,7 @@ time: 13:25:00
 status: published
 slug: p2m-e-modul
 lang: en
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 The IPS Education Study Program Team, SPs UPI, Postgraduate School, Universitas Pendidikan Indonesia, has carried out Community Service activities. This service with the theme "Strengthening Social Studies Teacher Competence Through Development of E-Module Media in Online Learning" is motivated by the need for teachers in the field to provide varied learning resources in distance learning in the midst of the Covid-19 pandemic.

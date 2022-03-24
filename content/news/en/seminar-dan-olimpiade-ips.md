@@ -6,7 +6,7 @@ time: 10:10:00
 status: published
 slug: seminar-dan-olimpiade-ips
 lang: en
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 Friday, November 13, 2020 Social Studies Education Study Program has held a National Social Sciences Teacher Olympiad which will be held online. This activity is a routine agenda for the Study Program every year, but there is something different this year the Olympics are being held online for the first time. However, through the committee's hard work and intensive communication, the activities ran smoothly as expected without any significant problems.

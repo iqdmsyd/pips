@@ -113,6 +113,7 @@ export const data = graphql`
           time
           slug
           date(formatString: "MMMM Do, YYYY")
+          image
         }
         html
         id
@@ -129,6 +130,7 @@ export const data = graphql`
           time
           slug
           date(formatString: "MMMM Do, YYYY")
+          image
         }
         html
         id

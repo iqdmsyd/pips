@@ -6,7 +6,7 @@ time: 9:18:00
 status: published
 slug: pengabdian-pada-masyarakat
 lang: en
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 Dozens of students of the Social Science Education Study Program (PIPS) Universitas Pendidikan Indonesia (UPI) Bandung class 2016, 2017, and 2018 held community service accompanied by several PIPS lecturers as representatives, namely: Mr. Muhammad Arief Rakhman, Mrs. Mina Holilah, Mrs. Dina Siti Logayah and Mrs. Diana Nur Anggraeni This activity was opened by the Head of Study Program, namely, Dr. Dadang Sundawa.

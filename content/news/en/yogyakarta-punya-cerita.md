@@ -6,7 +6,7 @@ time: 10:40:00
 status: published
 slug: yogyakarta-punya-cerita
 lang: en
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 Yogyakarata, is a city that always surprises us every time we visit it. At this time, UPI Social Science Education class 2018 had the opportunity to explore knowledge in the city of Jogjakarta. We departed from our beloved campus on Wednesday, November 27, 2019 and arrived the next day, Thursday, November 28, 2019. We visited several destinations to make observations. First, we visited a tourist village located approximately 5 KM from the Jogja Return Monument. The village is a tourist village of Tanjung. Arriving there we were given a warm welcome by one of the residents of the village of Tanjung who is the manager of the tourist village. Then we were immediately directed to see one of the historic joglo houses which is no longer inhabited. It is said that the pillars of the joglo house are made of jackfruit wood which is about 200 years old. Some of the people in this Tanjung village work as farmers. The environment is still beautiful and the people who still preserve traditional arts are the main attraction for this Tanjung Village. Not only that, we were also treated to a special traditional food called sagon, a sweet snack made from coconut and white glutinous rice, besides that we were also taught some of their traditional dances.

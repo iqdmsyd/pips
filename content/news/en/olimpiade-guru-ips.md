@@ -6,7 +6,7 @@ time: 17:25:00
 status: published
 slug: olimpiade-guru-ips
 lang: en
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 The Industrial Revolution 4.0 is the latest phase of technological development that is approaching the global world. The era of the industrial revolution 4.0 cannot be denied that it will have an impact that is not simple, it even has an impact on all aspects of human life, including the education aspect. Therefore, there needs to be a good response from various elements to predict the future of the 4.0 industrial revolution, so that each of these elements can anticipate all the problems and challenges that may come as a result of the 4.0 industrial revolution.

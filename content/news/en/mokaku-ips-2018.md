@@ -6,7 +6,7 @@ time: 9:03:00
 status: published
 slug: mokaku-ips-2018
 lang: en
-image: panigale-v4r.jpg
+image: template.png
 ---
 
 Hundreds of new students from the Indonesian Education University (UPI) Bandung class 2018 filled the courtyard of the UPI Gymnasium Building in order to carry out the Campus Orientation Period (MOKAKU), including new students of the Social Sciences Education study program. This Campus Orientation Period (MOKAKU) activity is an annual activity held at the beginning of each academic year as a means of introducing campus to new students.
