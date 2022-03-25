@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Purpose:
+ * Assign height: "100%" to
+ * html, body, #___gatsby &
+ * div with role="group"
+*/
+
+html, body, #___gatsby {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  background-image: url('../../static/bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+.markdown li {
+  @apply list-decimal list-outside ml-3 mb-3 text-sm md:text-base
+}
+
+.markdown table {
+  @apply mb-4 border-2
+}
+
+.markdown th, .markdown td {
+  @apply px-4 py-2 min-w-min text-sm md:text-base
+}
+
+.markdown h1 {
+  @apply text-2xl 2xl:text-3xl font-bold mb-4
+}
+
+.markdown h2 {
+  @apply text-lg 2xl:text-xl font-semibold mb-3
+}
+
+.markdown h3 {
+  @apply font-semibold 2xl:text-lg
+}
+
+.markdown p {
+  @apply mb-3 text-sm md:text-base
+}
+
+.markdown a {
+  @apply underline hover:text-blue-500
+}
+
+.swiper-button-next {
+  color: rgb(245, 245, 245) !important;
+}
+
+.swiper-button-prev {
+  color: rgb(245, 245, 245) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgb(245, 245, 245) !important;
+}
+
+details .nav-summary::marker {
+  display: none;
+  content: "";
+}
+
+details[open] .nav-summary-chevron {
+  transform: rotate(180deg);
+}

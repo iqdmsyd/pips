@@ -1,0 +1,41 @@
+{
+  "title": "Official Website Pendidikan Ilmu Pengetahuan Sosial",
+  "home": {
+    "greetings": "Greetings!",
+    "recentNews": "Recent News",
+    "announcements": "Announcements",
+    "downloads": "Downloads",
+    "links": "Links"
+  },
+  "profile": {
+    "profile": "Profile",
+    "greetings": "A Welcome Message from the Head of the Social Studies Education Study Program",
+    "history": "History",
+    "visionAndMission": "Vision & Mission",
+    "accreditation": "Accreditation",
+    "organization": "Organizational Structural"
+  },
+  "news": {
+    "news": "News",
+    "announcement": "Announcements"
+  },
+  "academic": {
+    "curriculum": "Curriculum",
+    "calendar": "Academic Calendar"
+  },
+  "admission": {
+    "scholarshipLocal": "Indonesian Students Scholarships",
+    "scholarshipInter": "International Students Scholarships"
+  },
+  "research": {
+    "communityService": "Community Service",
+    "journal": "Journal"
+  },
+  "affairs": {
+    "studentAchievment": "Student Achievment",
+    "studentMobility": "Student Mobility",
+    "studentAssociation": "Student Association",
+    "studentActivity": "Student Activity",
+    "alumni": "Alumni"
+  }
+}
