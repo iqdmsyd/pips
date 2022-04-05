@@ -7,13 +7,27 @@ import Sidebar from '../components/Sidebar'
 import { graphql, Link } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 
-const NewsList = ({ data, pageContext }) => {
+const NewsList = ({ data, pageContext, location }) => {
+  const search = new RegExp(location.search.slice(8), 'i')
   const intl = useIntl()
   const [ tabOpen, setTabOpen ] = useState({ news: true, annoncements: false })
   const { news_EN, news_ID, announcements_EN, announcements_ID } = data
 
-  const listNews = intl.locale === 'id' ? news_ID : news_EN
-  const listAnnouncements = intl.locale === 'id' ? announcements_ID : announcements_EN
+  let listNews = intl.locale === 'id' ? news_ID : news_EN
+  let listAnnouncements = intl.locale === 'id' ? announcements_ID : announcements_EN
+
+  if (search) {
+    listNews.nodes = listNews.nodes.filter(news => {
+      let title = news.frontmatter.title
+      let html = news.html
+      if (search.test(title) || search.test(html)) return news;
+    })
+    listAnnouncements.nodes = listAnnouncements.nodes.filter(news => {
+      let title = news.frontmatter.title
+      let html = news.html
+      if (search.test(title) || search.test(html) ) return news;
+    })
+  }
 
   const changeWhichTabOpen = (tab) => {
     setTabOpen(prev => {
@@ -26,7 +40,9 @@ const NewsList = ({ data, pageContext }) => {
 
   // pagination button
   const pagination = []
-  for(let i=0; i<pageContext.numPages; i++) pagination[i] = i + 1
+  if (location.search.length == 0) {
+    for(let i=0; i<pageContext.numPages; i++) pagination[i] = i + 1
+  }
 
   return (
     <Layout>
@@ -48,7 +64,7 @@ const NewsList = ({ data, pageContext }) => {
                 { intl.formatMessage({ id: 'news.announcement' }) }
               </button>
             </div>
-            { tabOpen.news && (
+            { tabOpen.news && listNews.nodes && (
               <ul>
                 { listNews.nodes.map((news) => (
                     <News key={news.id} news={news} />
@@ -56,13 +72,23 @@ const NewsList = ({ data, pageContext }) => {
                 }
               </ul>
             )}
-            { tabOpen.annoncements && (
+            { tabOpen.news && listNews.nodes.length == 0 && (
+              <div className='mb-3'>
+                <p>Tidak ditemukan.</p>
+              </div>
+            )}
+            { tabOpen.annoncements && listAnnouncements.nodes && (
               <ul>
                 { listAnnouncements.nodes.map((news) => (
                     <News key={news.id} news={news} />
                   ))
                 }
               </ul>
+            )}
+            { tabOpen.annoncements && listAnnouncements.nodes.length == 0 && (
+              <div className='mb-3'>
+                <p>Tidak ditemukan.</p>
+              </div>
             )}
             <div className='flex mb-4 space-x-8'>
               {

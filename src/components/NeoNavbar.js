@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import { useIntl, changeLocale } from 'gatsby-plugin-intl'
 
 
@@ -27,6 +27,17 @@ export default function NeoNavbar() {
   //   }
   // })
 
+  const [searchValue, setSearchValue] = useState("");
+  const submitSearch = (e) => {
+    e.preventDefault();
+    let value = e.target.search.value;
+    navigate(`/news?search=${value}`);
+  }
+
+  const onChangeSearch = (e) => {
+    setSearchValue(e.target.value);
+  }
+
   return (
     <div className='sticky top-0 z-50'>
       {/* top nav */}
@@ -36,7 +47,7 @@ export default function NeoNavbar() {
             <FontAwesomeIcon icon={faLanguage} className='text-white' size='lg'/>
           </span>
           <div
-            className='relative flex px-2 text-xs text-white align-middle md:text-sm'
+            className='relative flex px-2 py-3 text-xs text-white align-middle md:text-sm md:py-1'
             role='button'
             tabIndex={0}
             onClick={ () => setChangeLangOpen(c => !c) }
@@ -50,12 +61,24 @@ export default function NeoNavbar() {
             </div> }
           </div>
 
-          <ul className='flex gap-4 ml-auto'>
-            <li><FontAwesomeIcon icon={faInstagram} className='text-white'/></li>
-            <li><FontAwesomeIcon icon={faYoutube} className='text-white'/></li>
-            <li><FontAwesomeIcon icon={faPhone} className='text-white'/></li>
-            <li><FontAwesomeIcon icon={faEnvelope} className='text-white'/></li>
-            <li><FontAwesomeIcon icon={faSearch} className='ml-4 text-white'/></li>
+          <ul className='flex gap-4 ml-auto align-bottom'>
+            <li><FontAwesomeIcon icon={faInstagram} className='mt-3 text-white md:mt-0'/></li>
+            <li><FontAwesomeIcon icon={faYoutube} className='mt-3 text-white md:mt-0'/></li>
+            <li><FontAwesomeIcon icon={faPhone} className='mt-3 text-white md:mt-0'/></li>
+            <li><FontAwesomeIcon icon={faEnvelope} className='mt-3 text-white md:mt-0'/></li>
+            <li className=''>
+              <form onSubmit={(e) => submitSearch(e)}>
+                <input
+                  type="text"
+                  name="search"
+                  value={searchValue}
+                  onChange={(e) => onChangeSearch(e)}
+                  className='w-32 px-2 py-1 mt-2 text-sm bg-gray-300 outline-none md:w-auto md:mt-0'
+                  placeholder={intl.locale == 'id' ? 'Cari..' : 'Search..'}
+                />
+                <FontAwesomeIcon icon={faSearch} className='mt-3 ml-4 text-white md:mt-0'/>
+              </form>
+            </li>
           </ul>
         </div>
       </div>
